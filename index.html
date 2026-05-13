@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Business Bridge – Endless Possibilities. Entreprise nigérienne multidisciplinaire. Ingénierie, commerce international, numérique, agriculture, énergie. Niamey, Niger."/>
+<meta name="description" content="Business Bridge SARL — ingénierie, BTP, numérique, agriculture, énergie solaire, commerce international. EPPRIDAD, Éclosion Rurale, KASSAN MOU. Niamey, Niger."/>
 <meta name="keywords" content="Business Bridge, EPPRIDAD, KASSANMOU, Niger, agribusiness, ingénierie, commerce international, énergie solaire, BTP, numérique"/>
 <meta property="og:title" content="Business Bridge | Endless Possibilities"/>
 <meta property="og:description" content="We build ecosystems. From local potential to global opportunities."/>
-<title>Business Bridge | Endless Possibilities</title>
+<title>Business Bridge SARL — Ingénierie · BTP · Numérique · Agriculture · Niger</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Inter:wght@200;300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -130,7 +130,7 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
 .btn-s:hover{border-color:rgba(201,168,76,.3);color:var(--gold);background:var(--gold-dim);transform:translateY(-2px)}
 
 /* Hero stats */
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.04);border-radius:var(--r2);overflow:hidden;margin-top:40px}
+.hero-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.04);border-radius:var(--r2);overflow:hidden;margin-top:40px}
 .h-stat{padding:18px 12px;background:rgba(7,12,20,.6);text-align:center;transition:background .3s;cursor:default}
 .h-stat:hover{background:rgba(201,168,76,.03)}
 .h-stat-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block}
@@ -379,6 +379,15 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
 /* SÉPARATEURS */
 .sec-div{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.08),rgba(0,212,255,.05),transparent)}
 
+/* Timeline extra items */
+.tl-item.rv.d1b,.tl-item.rv.d4b,.tl-item.rv.d4c{opacity:0;transform:translateY(32px);transition:opacity .85s ease,transform .85s ease}
+.tl-item.rv.d1b.on,.tl-item.rv.d4b.on,.tl-item.rv.d4c.on{opacity:1;transform:translateY(0)}
+.tl-item.rv.d1b{transition-delay:.1s}.tl-item.rv.d4b{transition-delay:.2s}.tl-item.rv.d4c{transition-delay:.3s}
+.rv.d0{transition-delay:0s}.rv.d0b{transition-delay:.04s}
+
+/* Impact grid 5 columns on large */
+@media(min-width:1100px){.impact-grid{grid-template-columns:repeat(5,1fr)}}
+
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:1100px){
   .domaines-grid{grid-template-columns:repeat(2,1fr)}
@@ -414,7 +423,7 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
 @media(max-width:500px){
   .impact-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:1fr 1fr}
-  .h-stat:last-child{grid-column:1/-1}
+  .h-stat:last-child{grid-column:auto}
 }
 </style>
 </head>
@@ -504,6 +513,18 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
         We build<br/>
         <span class="shimmer-txt">ecosystems.</span>
       </h1>
+      <!-- Texte rotatif -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;overflow:hidden;font-family:Space Grotesk,sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--t3)">
+        <span style="width:24px;height:1px;background:var(--gold);opacity:.5;flex-shrink:0"></span>
+        <div style="position:relative;height:1.4em;overflow:hidden;flex:1" id="rotWrap">
+          <span class="rw active" style="position:absolute;top:0;left:0;transition:all .5s ease;opacity:1;transform:translateY(0)">Ingénierie & BTP</span>
+          <span class="rw" style="position:absolute;top:0;left:0;transition:all .5s ease;opacity:0;transform:translateY(100%)">Numérique & Digital</span>
+          <span class="rw" style="position:absolute;top:0;left:0;transition:all .5s ease;opacity:0;transform:translateY(100%)">Commerce International</span>
+          <span class="rw" style="position:absolute;top:0;left:0;transition:all .5s ease;opacity:0;transform:translateY(100%)">Énergie Solaire</span>
+          <span class="rw" style="position:absolute;top:0;left:0;transition:all .5s ease;opacity:0;transform:translateY(100%)">Agriculture & Export</span>
+          <span class="rw" style="position:absolute;top:0;left:0;transition:all .5s ease;opacity:0;transform:translateY(100%)">Santé & Phytothérapie</span>
+        </div>
+      </div>
       <div class="hero-sub-tag">From local potential to global opportunities</div>
       <p class="hero-p">
         Business Bridge est une entreprise nigérienne multidisciplinaire — ingénierie, commerce international, numérique, agriculture, énergie, infrastructure. Un pont stratégique entre les potentiels africains et les marchés mondiaux.
@@ -513,8 +534,10 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
         <a href="#contact" class="btn-s">Nous contacter</a>
       </div>
       <div class="hero-stats">
-        <div class="h-stat"><span class="h-stat-n">7+</span><span class="h-stat-l">Années terrain</span></div>
-        <div class="h-stat"><span class="h-stat-n">500+</span><span class="h-stat-l">Points d'eau</span></div>
+        <div class="h-stat"><span class="h-stat-n">26M</span><span class="h-stat-l">FCFA actifs</span></div>
+        <div class="h-stat"><span class="h-stat-n">8</span><span class="h-stat-l">Secteurs</span></div>
+        <div class="h-stat"><span class="h-stat-n">3</span><span class="h-stat-l">Entités</span></div>
+        <div class="h-stat"><span class="h-stat-n">7+</span><span class="h-stat-l">Ans terrain</span></div>
         <div class="h-stat"><span class="h-stat-n">2030</span><span class="h-stat-l">Horizon</span></div>
       </div>
     </div>
@@ -543,6 +566,7 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
         <div class="bf bf1" style="top:55px;left:-65px"><span class="bf-label">EPPRIDAD</span><span class="bf-val">École · Est. 2024</span></div>
         <div class="bf bf2" style="bottom:75px;right:-55px"><span class="bf-label">KASSANMOU</span><span class="bf-val">Marketplace digitale</span></div>
         <div class="bf bf3" style="bottom:15px;left:-15px"><span class="bf-label">FERME.</span><span class="bf-val">Hub · 8 ha · Youri</span></div>
+        <div class="bf" style="top:180px;right:-48px;animation:bF2 5.5s ease-in-out infinite;animation-delay:-3s"><span class="bf-label">Niger → Monde</span><span class="bf-val">Exporter</span></div>
       </div>
     </div>
   </div>
@@ -568,7 +592,20 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
     <span class="marq-item"><span class="marq-dot"></span>Agriculture & Agro-industrie</span>
     <span class="marq-item"><span class="marq-dot"></span>Énergie Solaire</span>
     <span class="marq-item"><span class="marq-dot"></span>Niger · Afrique · Monde</span>
-    <span class="marq-item"><span class="marq-dot"></span>Endless Possibilities</span>
+    <span class="marq-item hi"><span class="marq-dot"></span>Endless Possibilities</span>
+    <span class="marq-item"><span class="marq-dot"></span>Export Sésame → Inde</span>
+    <span class="marq-item"><span class="marq-dot"></span>Export Cornes → Vietnam</span>
+    <span class="marq-item"><span class="marq-dot"></span>BANITURI · 26M FCFA · 2026</span>
+    <span class="marq-item"><span class="marq-dot"></span>Ingénierie & BTP</span>
+    <span class="marq-item"><span class="marq-dot"></span>Santé & Phytothérapie</span>
+    <span class="marq-item hi"><span class="marq-dot"></span>Éclosion Rurale</span>
+    <span class="marq-item hi"><span class="marq-dot"></span>Endless Possibilities</span>
+    <span class="marq-item"><span class="marq-dot"></span>Export Sésame → Inde</span>
+    <span class="marq-item"><span class="marq-dot"></span>Export Cornes → Vietnam</span>
+    <span class="marq-item"><span class="marq-dot"></span>BANITURI · 26M FCFA · 2026</span>
+    <span class="marq-item"><span class="marq-dot"></span>Ingénierie & BTP</span>
+    <span class="marq-item"><span class="marq-dot"></span>Santé & Phytothérapie</span>
+    <span class="marq-item hi"><span class="marq-dot"></span>Éclosion Rurale</span>
   </div>
 </div>
 
@@ -703,7 +740,23 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
 
     </div>
     <!-- Note stratégique -->
-    <div class="rv" style="margin-top:32px;padding:24px 28px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:var(--r2);display:flex;align-items:flex-start;gap:16px">
+    <!-- Pétrole -->
+      <div class="dom-card rv d7" style="--dc:linear-gradient(90deg,#94a3b8,#334155);--dc-c:#94a3b8;--ds-c:#94a3b8">
+        <div class="dom-icon"><svg width="22" height="22" fill="none" stroke="#94a3b8" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg></div>
+        <div class="dom-tag" style="color:#94a3b8;background:rgba(148,163,184,.06);border-color:rgba(148,163,184,.12)">En développement</div>
+        <div class="dom-title">Pétrole &<br/>Ressources</div>
+        <div class="dom-text">Fourniture équipements techniques · Logistique terrain · Supervisions · Accompagnement opérateurs secteur pétrolier niger</div>
+        <div class="dom-status" style="--ds-c:#94a3b8">Axe stratégique futur</div>
+      </div>
+      <!-- Santé -->
+      <div class="dom-card rv d8" style="--dc:linear-gradient(90deg,#f472b6,#be185d);--dc-c:#f472b6;--ds-c:#f472b6">
+        <div class="dom-icon"><svg width="22" height="22" fill="none" stroke="#f472b6" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="dom-tag" style="color:#f472b6;background:rgba(244,114,182,.06);border-color:rgba(244,114,182,.12)">Actif · Contrat OMS</div>
+        <div class="dom-title">Santé &<br/>Phytothérapie</div>
+        <div class="dom-text">Digitalisation coopératives santé · BANITURI : 26M FCFA · 5 ans · Réf. BAN/OMS/NE/2026/001 · Accompagnement dossier OMS</div>
+        <div class="dom-status" style="--ds-c:#f472b6">Contrat signé Mai 2026</div>
+      </div>
+      <div class="rv" style="margin-top:32px;padding:24px 28px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:var(--r2);display:flex;align-items:flex-start;gap:16px">
       <svg width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <div><div style="font-family:'Space Grotesk',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:5px">Note stratégique</div><div style="font-size:.84rem;color:var(--t2);line-height:1.65;font-weight:300">Ces domaines représentent les axes de développement et d'expansion de Business Bridge. Certains sont déjà opérationnels, d'autres en cours de structuration. L'entreprise est en forte construction — chaque secteur sera activé progressivement selon la stratégie de croissance définie.</div></div>
     </div>
@@ -804,7 +857,168 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
 
 <div class="sec-div"></div>
 
+
+<div class="sep"></div>
+
+<!-- ═══ ÉCLOSION RURALE — HUB COOPÉRATIF ═══ -->
+<section id="eclosion" style="background:linear-gradient(160deg,rgba(8,22,8,.97),rgba(7,12,20,.98));padding:110px 24px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(46,139,46,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(46,139,46,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
+  <div style="max-width:1360px;margin:0 auto;position:relative;z-index:2">
+
+    <div class="text-center rv" style="max-width:680px;margin:0 auto">
+      <span class="sec-tag" style="justify-content:center;color:#4ade80">Pilier 2 · Nouveau</span>
+      <div style="width:40px;height:1px;background:linear-gradient(90deg,#4ade80,var(--gold));margin:12px auto"></div>
+      <h2 style="font-family:Cormorant Garamond,serif;font-weight:300;font-size:clamp(2rem,4vw,3.5rem);color:var(--t1);line-height:1.08;margin-bottom:12px">
+        Éclosion Rurale<br/>
+        <em style="background:linear-gradient(135deg,#4ade80,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Le Hub Coopératif.</em>
+      </h2>
+      <p style="font-size:.9rem;color:var(--t2);font-weight:300;line-height:1.7;max-width:580px;margin:0 auto">Transformer des producteurs isolés en puissance collective. Organiser, valoriser, connecter la production agricole nigérienne aux marchés régionaux et internationaux.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:56px" class="ecl-grid">
+
+      <!-- Gauche : 4 fonctions -->
+      <div>
+        <h3 style="font-family:Cormorant Garamond,serif;font-size:1.4rem;font-weight:600;color:var(--t1);margin-bottom:16px">Les 4 fonctions du hub</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px">
+          <div class="rv d1" style="padding:16px;background:rgba(255,255,255,.025);border:1px solid rgba(74,222,128,.15);border-radius:6px;transition:all .3s;cursor:default" onmouseover="this.style.borderColor='rgba(74,222,128,.35)';this.style.background='rgba(74,222,128,.05)'" onmouseout="this.style.borderColor='rgba(74,222,128,.15)';this.style.background='rgba(255,255,255,.025)'">
+            <div style="font-size:1.2rem;margin-bottom:7px">🏭</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#4ade80;margin-bottom:4px">Centre de Collecte</div>
+            <div style="font-size:.78rem;color:var(--t3);line-height:1.5;font-weight:300">Regroupement productions coopératives et producteurs individuels du Niger</div>
+          </div>
+          <div class="rv d2" style="padding:16px;background:rgba(255,255,255,.025);border:1px solid rgba(74,222,128,.15);border-radius:6px;transition:all .3s;cursor:default" onmouseover="this.style.borderColor='rgba(74,222,128,.35)';this.style.background='rgba(74,222,128,.05)'" onmouseout="this.style.borderColor='rgba(74,222,128,.15)';this.style.background='rgba(255,255,255,.025)'">
+            <div style="font-size:1.2rem;margin-bottom:7px">✅</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#4ade80;margin-bottom:4px">Tri Qualité</div>
+            <div style="font-size:.78rem;color:var(--t3);line-height:1.5;font-weight:300">Premium / Standard / Transformation. Rien ne se perd — classification rigoureuse</div>
+          </div>
+          <div class="rv d3" style="padding:16px;background:rgba(255,255,255,.025);border:1px solid rgba(74,222,128,.15);border-radius:6px;transition:all .3s;cursor:default" onmouseover="this.style.borderColor='rgba(74,222,128,.35)';this.style.background='rgba(74,222,128,.05)'" onmouseout="this.style.borderColor='rgba(74,222,128,.15)';this.style.background='rgba(255,255,255,.025)'">
+            <div style="font-size:1.2rem;margin-bottom:7px">💎</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#4ade80;margin-bottom:4px">Valorisation</div>
+            <div style="font-size:.78rem;color:var(--t3);line-height:1.5;font-weight:300">Transformation, conditionnement, emballage aux normes export internationales</div>
+          </div>
+          <div class="rv d4" style="padding:16px;background:rgba(255,255,255,.025);border:1px solid rgba(74,222,128,.15);border-radius:6px;transition:all .3s;cursor:default" onmouseover="this.style.borderColor='rgba(74,222,128,.35)';this.style.background='rgba(74,222,128,.05)'" onmouseout="this.style.borderColor='rgba(74,222,128,.15)';this.style.background='rgba(255,255,255,.025)'">
+            <div style="font-size:1.2rem;margin-bottom:7px">📊</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#4ade80;margin-bottom:4px">Centrale de Marché</div>
+            <div style="font-size:.78rem;color:var(--t3);line-height:1.5;font-weight:300">Stabiliser les prix, réduire les pertes, connexion directe à KASSAN MOU</div>
+          </div>
+        </div>
+        <div style="margin-bottom:20px;padding:14px 16px;background:rgba(74,222,128,.03);border:1px solid rgba(74,222,128,.1);border-radius:6px;font-size:.78rem;color:rgba(74,222,128,.65);line-height:1.55;font-weight:300">
+          🗺️ Carte interactive des exploitations · Base de données producteurs Niger · Maraîchage · Pisciculture · Élevage · Énergie solaire · Agriculture régénératrice
+        </div>
+        <a href="#" onclick="return false" style="display:inline-flex;align-items:center;gap:9px;font-family:Space Grotesk,sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(135deg,rgba(45,122,45,.9),rgba(46,139,46,.8));color:#f0f4ff;padding:12px 26px;border-radius:2px;cursor:pointer;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(26,93,26,.2)">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+          Visiter Éclosion Rurale
+        </a>
+        <div style="font-size:.68rem;color:var(--t4);margin-top:7px;font-style:italic">Site en cours de déploiement — disponible prochainement</div>
+      </div>
+
+      <!-- Droite : Ferme Youri -->
+      <div class="rv-r" style="background:rgba(255,255,255,.025);border:1px solid rgba(201,168,76,.12);border-radius:12px;padding:28px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#1a5d1a,#c9a84c)"></div>
+        <div style="font-family:Space Grotesk,sans-serif;font-size:.52rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">📍 Ferme pilote</div>
+        <h3 style="font-family:Cormorant Garamond,serif;font-size:1.5rem;font-weight:600;color:var(--t1);margin-bottom:4px">Ferme intégrée de Youri</h3>
+        <p style="font-size:.76rem;color:var(--t3);margin-bottom:18px;font-weight:300">Youri, Niger · 8 hectares acquis · Aménagement en démarrage · Modèle réplicable</p>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px">
+          <div style="text-align:center;padding:11px 6px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.08);border-radius:4px">
+            <div style="font-family:Cormorant Garamond,serif;font-size:1.5rem;font-weight:600;color:var(--gold);line-height:1">8</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.46rem;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-top:2px">hectares</div>
+          </div>
+          <div style="text-align:center;padding:11px 6px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.08);border-radius:4px">
+            <div style="font-family:Cormorant Garamond,serif;font-size:1.5rem;font-weight:600;color:var(--gold);line-height:1">5</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.46rem;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-top:2px">filières</div>
+          </div>
+          <div style="text-align:center;padding:11px 6px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.08);border-radius:4px">
+            <div style="font-family:Cormorant Garamond,serif;font-size:1.5rem;font-weight:600;color:var(--gold);line-height:1">3</div>
+            <div style="font-family:Space Grotesk,sans-serif;font-size:.46rem;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-top:2px">ans renta</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:14px">
+          <div style="padding:7px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:4px;font-family:Space Grotesk,sans-serif;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)">🌿 Maraîchage</div>
+          <div style="padding:7px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:4px;font-family:Space Grotesk,sans-serif;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)">🐟 Pisciculture</div>
+          <div style="padding:7px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:4px;font-family:Space Grotesk,sans-serif;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)">🐄 Élevage</div>
+          <div style="padding:7px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:4px;font-family:Space Grotesk,sans-serif;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)">☀️ Énergie solaire</div>
+          <div style="padding:7px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:4px;font-family:Space Grotesk,sans-serif;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)">♻️ Compost/Régén.</div>
+          <div style="padding:7px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:4px;font-family:Space Grotesk,sans-serif;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)">🔬 Centre d'essai</div>
+        </div>
+
+        <div style="padding:11px 14px;background:rgba(255,255,255,.02);border:1px solid rgba(74,222,128,.1);border-radius:4px;font-size:.76rem;color:var(--t3);line-height:1.55;font-weight:300">
+          Production aux normes internationales · Rentabilité en 3 ans · Export via KASSAN MOU · Modèle réplicable dans toutes les régions d'Afrique
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>@media(max-width:900px){.ecl-grid{grid-template-columns:1fr!important;gap:32px!important}}</style>
+</section>
+
 <!-- ═══ NOTRE APPROCHE ═══ -->
+
+<!-- ═══ FLUX 4 ÉTAPES ═══ -->
+<div class="sep"></div>
+<section id="flux" style="background:var(--ink);padding:80px 24px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,168,76,.03),transparent 70%);pointer-events:none"></div>
+  <div class="sec-wrap" style="position:relative;z-index:2">
+    <div class="text-center rv" style="max-width:580px;margin:0 auto 48px">
+      <span class="sec-tag" style="justify-content:center">Le flux de valeur</span>
+      <div class="gold-bar" style="margin:12px auto;width:40px"></div>
+      <h2 style="font-family:Cormorant Garamond,serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;color:var(--t1)">De la formation<br/><em style="background:linear-gradient(135deg,var(--gold),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">au marché mondial.</em></h2>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0;position:relative;z-index:2">
+
+      <div class="rv d1" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px;flex:1;min-width:140px;max-width:220px">
+        <div style="width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border:1px solid rgba(96,165,250,.2);background:rgba(96,165,250,.05);transition:all .4s">
+          <svg width="24" height="24" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div style="font-family:Space Grotesk,sans-serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:#60a5fa;margin-bottom:4px">EPPRIDAD</div>
+        <div style="font-family:Cormorant Garamond,serif;font-size:1.15rem;font-weight:600;color:var(--t1);margin-bottom:5px">Former</div>
+        <div style="font-size:.76rem;color:var(--t3);line-height:1.5;font-weight:300">300 jeunes agripreneurs par promotion</div>
+      </div>
+
+      <div style="color:rgba(201,168,76,.3);padding:0 6px;flex-shrink:0">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="animation:arrowPulse 2s ease-in-out infinite"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="rv d2" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px;flex:1;min-width:140px;max-width:220px">
+        <div style="width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border:1px solid rgba(74,222,128,.2);background:rgba(74,222,128,.05)">
+          <svg width="24" height="24" fill="none" stroke="#4ade80" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div style="font-family:Space Grotesk,sans-serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:#4ade80;margin-bottom:4px">ÉCLOSION RURALE</div>
+        <div style="font-family:Cormorant Garamond,serif;font-size:1.15rem;font-weight:600;color:var(--t1);margin-bottom:5px">Organiser</div>
+        <div style="font-size:.76rem;color:var(--t3);line-height:1.5;font-weight:300">Hub coopératif · Valoriser · Structurer</div>
+      </div>
+
+      <div style="color:rgba(201,168,76,.3);padding:0 6px;flex-shrink:0">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="animation:arrowPulse 2s ease-in-out infinite;animation-delay:.5s"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="rv d3" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px;flex:1;min-width:140px;max-width:220px">
+        <div style="width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border:1px solid rgba(201,168,76,.2);background:rgba(201,168,76,.05)">
+          <svg width="24" height="24" fill="none" stroke="#c9a84c" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </div>
+        <div style="font-family:Space Grotesk,sans-serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">KASSAN MOU</div>
+        <div style="font-family:Cormorant Garamond,serif;font-size:1.15rem;font-weight:600;color:var(--t1);margin-bottom:5px">Connecter</div>
+        <div style="font-size:.76rem;color:var(--t3);line-height:1.5;font-weight:300">Marketplace B2B · Niger → Monde</div>
+      </div>
+
+      <div style="color:rgba(201,168,76,.3);padding:0 6px;flex-shrink:0">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="animation:arrowPulse 2s ease-in-out infinite;animation-delay:1s"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="rv d4" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px;flex:1;min-width:140px;max-width:220px">
+        <div style="width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border:1px solid rgba(0,212,255,.2);background:rgba(0,212,255,.05)">
+          <svg width="24" height="24" fill="none" stroke="#00d4ff" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div style="font-family:Space Grotesk,sans-serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px">NIGER → MONDE</div>
+        <div style="font-family:Cormorant Garamond,serif;font-size:1.15rem;font-weight:600;color:var(--t1);margin-bottom:5px">Exporter</div>
+        <div style="font-size:.76rem;color:var(--t3);line-height:1.5;font-weight:300">Inde · Vietnam · Europe · Finlande</div>
+      </div>
+
+    </div>
+    <style>@keyframes arrowPulse{0%,100%{opacity:.28;transform:translateX(0)}50%{opacity:.65;transform:translateX(4px)}}</style>
+  </div>
+</section>
+
 <section id="approche" class="sec">
   <div class="sec-wrap">
     <div class="text-center rv" style="max-width:600px;margin:0 auto">
@@ -873,9 +1087,9 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
           <div style="position:absolute;top:10px;right:10px;font-family:'Space Grotesk',sans-serif;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;background:rgba(201,168,76,.1);color:var(--gold);border:1px solid rgba(201,168,76,.18);padding:3px 9px;border-radius:var(--r1)">Partenariat complet</div>
         </div>
         <div class="cl-body">
-          <div class="cl-tags"><span class="cl-tag">Identité digitale</span><span class="cl-tag">Développement web</span><span class="cl-tag">Accompagnement stratégique</span></div>
+          <div class="cl-tags"><span class="cl-tag">Accompagnement 360°</span><span class="cl-tag">26M FCFA · 5 ans</span><span class="cl-tag">Dossier OMS</span></div>
           <div class="cl-name">BANITURI</div>
-          <div class="cl-desc">Accompagnement global de Banituri — plateforme de valorisation du tourisme local nigérien. Business Bridge a assuré la création digitale complète (UX, design, développement), l'accompagnement numérique, la stratégie commerciale et le suivi post-lancement.</div>
+          <div class="cl-desc">Accompagnement global de Banituri — plateforme de valorisation du tourisme local nigérien. Contrat signé Mai 2026 — 26M FCFA HT · 5 ans · Réf. BAN/OMS/NE/2026/001. Accompagnement global : création digitale, stratégie commerciale, export, vente locale, dossier OMS. Partenaire stratégique de bout en bout.</div>
           <a href="https://businessbridge227-lab.github.io/banituri/" target="_blank" rel="noopener" class="cl-cta">Voir le site Banituri <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
@@ -928,6 +1142,8 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
       <h2 class="sec-title" style="font-size:clamp(2rem,4vw,3.2rem)">Des chiffres qui<br/>racontent une <em class="grad-txt">ambition.</em></h2>
     </div>
     <div class="impact-grid">
+      <div class="imp-cell rv d0"><span class="imp-n"><span class="counter" data-t="26">0</span><span class="imp-u">M</span></span><span class="imp-label">FCFA de contrats actifs</span><div class="imp-sub">BANITURI · BAN/OMS/NE/2026/001 · 5 ans</div><div class="imp-bar"><div class="imp-fill" data-w="82"></div></div></div>
+      <div class="imp-cell rv d0b"><span class="imp-n"><span class="counter" data-t="8">0</span></span><span class="imp-label">Secteurs d'intervention</span><div class="imp-sub">Agri · BTP · Digital · Énergie · Commerce · Formation · Santé · Pétrole</div><div class="imp-bar"><div class="imp-fill" data-w="100"></div></div></div>
       <div class="imp-cell rv d1"><span class="imp-n"><span class="counter" data-t="30">0</span><span class="imp-u">+</span></span><span class="imp-label">Étudiants EPPRIDAD</span><div class="imp-sub">Inscrits en formation diplômante agricole</div><div class="imp-bar"><div class="imp-fill" data-w="28"></div></div></div>
       <div class="imp-cell rv d2"><span class="imp-n"><span class="counter" data-t="500">0</span><span class="imp-u">+</span></span><span class="imp-label">Points d'eau supervisés</span><div class="imp-sub">Programme national Niger 2017 — 500 localités</div><div class="imp-bar"><div class="imp-fill" data-w="75"></div></div></div>
       <div class="imp-cell rv d3"><span class="imp-n"><span class="counter" data-t="8">0</span><span class="imp-u"> ha</span></span><span class="imp-label">Terrain Ferme de Youri</span><div class="imp-sub">Acquis · aménagement en démarrage</div><div class="imp-bar"><div class="imp-fill" data-w="45"></div></div></div>
@@ -993,7 +1209,16 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
       <div class="tl-line"></div>
       <div class="tl-items">
 
-        <div class="tl-item rv d1">
+        <div class="tl-item rv d1" style="padding:28px 0">
+          <div class="tl-left tl-box"><div class="tl-box-inner">
+            <div class="tl-tag">Développement rural · Hydraulique</div>
+            <div class="tl-title">Projet 500 points d'eau</div>
+            <div class="tl-text">Mobilisation communautaire, supervision locale, appui logistique — 500 localités au Niger. Premier grand projet structurant.</div>
+          </div></div>
+          <div class="tl-center"><div class="tl-dot"></div><div class="tl-yr">2017</div></div>
+          <div></div>
+        </div>
+        <div class="tl-item rv d1b">
           <div class="tl-left tl-box">
             <div class="tl-box-inner">
               <div class="tl-tag">Fondation</div>
@@ -1041,6 +1266,24 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
           </div>
         </div>
 
+        <div class="tl-item rv d4b">
+          <div></div>
+          <div class="tl-center"><div class="tl-dot"></div><div class="tl-yr">2024</div></div>
+          <div class="tl-right tl-box"><div class="tl-box-inner">
+            <div class="tl-tag">Commerce international · Filière bovine</div>
+            <div class="tl-title">Export cornes → Vietnam</div>
+            <div class="tl-text">Structuration de la filière bovine. Export de cornes vers le Vietnam. Maîtrise des standards qualité et de la logistique internationale.</div>
+          </div></div>
+        </div>
+        <div class="tl-item rv d4c">
+          <div class="tl-left tl-box"><div class="tl-box-inner" style="border-color:rgba(201,168,76,.2);background:rgba(201,168,76,.04)">
+            <div class="tl-tag" style="color:var(--gold)">Contrat majeur · Santé & Digital</div>
+            <div class="tl-title">BANITURI — 26M FCFA signé</div>
+            <div class="tl-text">26 000 000 FCFA HT · Durée 5 ans · Réf. BAN/OMS/NE/2026/001. Accompagnement stratégique, digital et commercial global. Dossier OMS.</div>
+          </div></div>
+          <div class="tl-center"><div class="tl-dot" style="background:linear-gradient(135deg,var(--gold),var(--gold2));box-shadow:0 0 18px rgba(201,168,76,.3)"></div><div class="tl-yr">Mai 2026</div></div>
+          <div></div>
+        </div>
         <div class="tl-item rv d5">
           <div class="tl-left tl-box">
             <div class="tl-box-inner" style="border-color:rgba(201,168,76,.2);background:var(--gold-dim)">
@@ -1058,6 +1301,12 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
 
     <!-- MOBILE – cards empilées -->
     <div class="tl-mobile">
+      <div class="tl-m-card rv d1">
+        <div class="tl-m-yr"><span style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0;box-shadow:0 0 6px rgba(201,168,76,.3)"></span>2017</div>
+        <div class="tl-m-tag">Développement rural</div>
+        <div class="tl-m-title">500 points d'eau au Niger</div>
+        <div class="tl-m-text">Mobilisation communautaire, supervision locale, appui logistique — 500 localités. Premier grand projet structurant.</div>
+      </div>
       <div class="tl-m-card rv d1">
         <div class="tl-m-year"><span class="tl-m-dot"></span>2023</div>
         <div class="tl-m-tag">Fondation</div>
@@ -1138,6 +1387,10 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
         <div class="c-items">
           <a href="tel:+22796816868" class="c-item"><div class="c-icon"><svg width="15" height="15" fill="none" stroke="#c9a84c" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="c-lbl">Téléphone</div><div class="c-val">(+227) 96 81 68 68</div></div></a>
           <a href="mailto:businessbridge227@gmail.com" class="c-item"><div class="c-icon"><svg width="15" height="15" fill="none" stroke="#c9a84c" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val">businessbridge227@gmail.com</div></div></a>
+          <a href="mailto:kassanmou@gmail.com" class="c-item">
+            <div class="c-icon"><svg width="15" height="15" fill="none" stroke="#c9a84c" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="c-lbl">Email KASSAN MOU</div><div class="c-val">kassanmou@gmail.com</div></div>
+          </a>
           <a href="https://wa.me/22796816868" target="_blank" rel="noopener" class="c-item"><div class="c-icon"><svg width="15" height="15" fill="#c9a84c" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div><div><div class="c-lbl">WhatsApp</div><div class="c-val">(+227) 96 81 68 68</div></div></a>
           <div class="c-item" style="cursor:default"><div class="c-icon"><svg width="15" height="15" fill="none" stroke="#c9a84c" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="c-lbl">Siège social</div><div class="c-val" style="font-size:.82rem">Gaweye, Ave des Chinois, Niamey</div></div></div>
         </div>
@@ -1287,6 +1540,38 @@ if(fb&&cs)new IntersectionObserver(e=>{fb.style.opacity=e[0].isIntersecting?'0':
   let pi=0,ci=0,del=false;
   function tick(){const ph=phrases[pi];if(!del){const t=ph.slice(0,++ci);tw.textContent=t;tw.appendChild(cur);if(ci===ph.length){del=true;setTimeout(tick,2200);return}}else{const t=ph.slice(0,--ci);tw.textContent=t;tw.appendChild(cur);if(ci===0){del=false;pi=(pi+1)%phrases.length;setTimeout(tick,350);return}}setTimeout(tick,del?32:65)}
   setTimeout(tick,1800);
+})();
+
+/* DROPDOWN ENTITÉS */
+document.querySelectorAll('.nav-drop').forEach(d=>{
+  const menu=d.querySelector('.nav-drop-menu');
+  if(!menu)return;
+  d.addEventListener('mouseenter',()=>{menu.style.opacity='1';menu.style.visibility='visible';menu.style.transform='translateX(-50%) translateY(0)'});
+  d.addEventListener('mouseleave',()=>{menu.style.opacity='0';menu.style.visibility='hidden'});
+});
+/* Inline dropdown hover */
+(function(){
+  const dropSpans=document.querySelectorAll('[id="entitesMenu"]');
+  dropSpans.forEach(menu=>{
+    const parent=menu.parentElement;
+    if(!parent)return;
+    parent.addEventListener('mouseenter',()=>{menu.style.opacity='1';menu.style.visibility='visible'});
+    parent.addEventListener('mouseleave',()=>{menu.style.opacity='0';menu.style.visibility='hidden'});
+  });
+})();
+
+/* TEXTE ROTATIF */
+(function(){
+  const words = document.querySelectorAll('.rw');
+  if(!words.length) return;
+  let cur = 0;
+  setInterval(() => {
+    words[cur].style.opacity = '0';
+    words[cur].style.transform = 'translateY(-100%)';
+    cur = (cur + 1) % words.length;
+    words[cur].style.opacity = '1';
+    words[cur].style.transform = 'translateY(0)';
+  }, 2200);
 })();
 
 /* SMOOTH SCROLL */
