@@ -1397,14 +1397,50 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
       </div>
       <div class="rv-r">
         <div class="form-wrap">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:.56rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:24px">Envoyez-nous un message</div>
-          <div class="f-row"><div class="f-grp"><label class="f-lbl">Prénom</label><input type="text" class="f-in" placeholder="Votre prénom"/></div><div class="f-grp"><label class="f-lbl">Nom</label><input type="text" class="f-in" placeholder="Votre nom"/></div></div>
-          <div class="f-grp"><label class="f-lbl">Email</label><input type="email" class="f-in" placeholder="votre@email.com"/></div>
-          <div class="f-grp"><label class="f-lbl">Sujet</label>
-            <select class="f-in"><option value="">Choisir un sujet…</option><option>Partenariat stratégique</option><option>Inscription EPPRIDAD</option><option>Investissement</option><option>Projet digital / Site web</option><option>KASSANMOU — Commerce & Export</option><option>Ferme — Production agricole</option><option>BTP & Infrastructures</option><option>Énergie solaire</option><option>Logistique & Approvisionnement</option><option>Autre</option></select>
-          </div>
-          <div class="f-grp"><label class="f-lbl">Message</label><textarea class="f-in" rows="4" placeholder="Décrivez votre projet ou demande…" style="resize:none"></textarea></div>
-          <button class="btn-submit">Envoyer le message →</button>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:.52rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:22px">Envoyez-nous un message</div>
+
+          <form id="bb-form" action="https://formspree.io/f/xpwrjkne" method="POST" novalidate style="display:flex;flex-direction:column;gap:0">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+            <input type="hidden" name="_subject" value="📩 Nouveau message — Business Bridge"/>
+
+            <div class="f-row">
+              <div class="f-grp"><label class="f-lbl" for="f-prenom">Prénom</label><input type="text" id="f-prenom" name="prenom" class="f-in" placeholder="Votre prénom" required/></div>
+              <div class="f-grp"><label class="f-lbl" for="f-nom">Nom</label><input type="text" id="f-nom" name="nom" class="f-in" placeholder="Votre nom" required/></div>
+            </div>
+            <div class="f-grp"><label class="f-lbl" for="f-email">Email</label><input type="email" id="f-email" name="email" class="f-in" placeholder="votre@email.com" required/></div>
+            <div class="f-grp">
+              <label class="f-lbl" for="f-tel">Téléphone (optionnel)</label>
+              <input type="tel" id="f-tel" name="telephone" class="f-in" placeholder="+227 xx xx xx xx"/>
+            </div>
+            <div class="f-grp">
+              <label class="f-lbl" for="f-sujet">Sujet</label>
+              <select id="f-sujet" name="sujet" class="f-in">
+                <option value="">Choisir un sujet…</option>
+                <option>Partenariat stratégique</option>
+                <option>Investissement / Bailleur</option>
+                <option>Inscription EPPRIDAD</option>
+                <option>KASSAN MOU — Commerce & Export</option>
+                <option>Ferme / Éclosion Rurale</option>
+                <option>BTP & Infrastructures</option>
+                <option>Énergie solaire</option>
+                <option>Numérique & Digital</option>
+                <option>Projet web / Plateforme</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="f-grp"><label class="f-lbl" for="f-msg">Message</label><textarea id="f-msg" name="message" class="f-in" rows="4" placeholder="Décrivez votre projet ou demande…" style="resize:none" required></textarea></div>
+
+            <button type="submit" class="btn-submit" id="bb-submit">
+              <span id="bb-btn-txt">Envoyer le message →</span>
+            </button>
+
+            <div id="bb-success" style="display:none;margin-top:14px;padding:13px 16px;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:6px;font-family:Space Grotesk,sans-serif;font-size:.78rem;color:#4ade80;text-align:center;line-height:1.6">
+              ✅ Message envoyé avec succès !<br/>Nous vous répondrons très rapidement à businessbridge227@gmail.com
+            </div>
+            <div id="bb-error" style="display:none;margin-top:14px;padding:13px 16px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:6px;font-family:Space Grotesk,sans-serif;font-size:.78rem;color:#f87171;text-align:center;line-height:1.6">
+              ❌ Erreur d'envoi. Réessayez ou écrivez directement à<br/><a href="mailto:businessbridge227@gmail.com" style="color:#f87171">businessbridge227@gmail.com</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1422,7 +1458,8 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
       <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
         <a href="#contact" class="btn-p">Nous contacter <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="https://www.eppridad.com" target="_blank" rel="noopener" class="btn-s">EPPRIDAD</a>
-        <a href="https://laoulaboukar-ship-it.github.io/kassanmou/" target="_blank" rel="noopener" class="btn-s">KASSANMOU</a>
+        <a href="https://laoulaboukar-ship-it.github.io/kassanmou/" target="_blank" rel="noopener" class="btn-s">KASSAN MOU</a>
+        <a href="https://laoulaboukar-ship-it.github.io/eclosionrurale/" target="_blank" rel="noopener" class="btn-s">Éclosion Rurale ↗</a>
       </div>
     </div>
   </div>
@@ -1455,7 +1492,7 @@ body.hov #cur-ring{width:50px;height:50px;border-color:rgba(0,212,255,.3)}
         <a href="https://wa.me/22796816868" class="f-soc" aria-label="WhatsApp"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9.87 9.87 0 00-5.031 1.378l-.361.214L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893"/></svg></a>
       </div>
     </div>
-    <div><div class="f-col-title">Nos projets</div><a href="https://www.eppridad.com" target="_blank" class="f-lnk">EPPRIDAD</a><a href="https://laoulaboukar-ship-it.github.io/kassanmou/" target="_blank" class="f-lnk">KASSANMOU</a><a href="#branches" class="f-lnk">FERME. · Youri</a><a href="https://laoulaboukar-ship-it.github.io/eclosionrurale/" target="_blank" rel="noopener" class="f-lnk">Éclosion Rurale ↗</a></div>
+    <div><div class="f-col-title">Nos projets</div><a href="https://www.eppridad.com" target="_blank" class="f-lnk">EPPRIDAD</a><a href="https://laoulaboukar-ship-it.github.io/kassanmou/" target="_blank" class="f-lnk">KASSANMOU</a><a href="https://laoulaboukar-ship-it.github.io/eclosionrurale/" target="_blank" rel="noopener" class="f-lnk">Éclosion Rurale · Youri ↗</a><a href="https://laoulaboukar-ship-it.github.io/eclosionrurale/" target="_blank" rel="noopener" class="f-lnk">Éclosion Rurale ↗</a></div>
     <div><div class="f-col-title">Navigation</div><a href="#about" class="f-lnk">À propos</a><a href="#domaines" class="f-lnk">Domaines</a><a href="#clients" class="f-lnk">Réalisations</a><a href="#vision" class="f-lnk">Vision</a><a href="#timeline" class="f-lnk">Timeline</a><a href="#contact" class="f-lnk">Contact</a></div>
     <div><div class="f-col-title">Informations légales</div><span class="f-lnk" style="cursor:default">Niamey, Niger</span><span class="f-lnk" style="cursor:default">RCCM : NE-NIM-01-2023-B13-00185</span><span class="f-lnk" style="cursor:default">NIF : 102673/R</span><span class="f-lnk" style="cursor:default">Arrêté N°0004 · 19 Jan 2026</span><span class="f-lnk" style="cursor:default">businessbridge227@gmail.com</span></div>
   </div>
@@ -1495,13 +1532,43 @@ const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.targe
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>io.observe(el));
 
 /* COMPTEURS */
-function animC(el){const t=parseInt(el.dataset.t,10),t0=performance.now(),d=1800;(function s(n){const p=Math.min((n-t0)/d,1),v=Math.floor((1-Math.pow(1-p,3))*t);el.textContent=v>=1000?v.toLocaleString('fr-FR'):String(v);if(p<1)requestAnimationFrame(s);else el.textContent=t>=1000?t.toLocaleString('fr-FR'):String(t)})(t0)}
-const cio=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting&&!x.target._c){x.target._c=1;animC(x.target);cio.unobserve(x.target)}})},{threshold:.5});
-document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+function animC(el){
+  if(el._c)return; el._c=1;
+  const t=parseInt(el.dataset.t,10);
+  if(!t||isNaN(t))return;
+  const t0=performance.now(),d=1800;
+  (function s(n){
+    const p=Math.min((n-t0)/d,1),v=Math.floor((1-Math.pow(1-p,3))*t);
+    el.textContent=v>=1000?v.toLocaleString('fr-FR'):String(v);
+    if(p<1)requestAnimationFrame(s);
+    else el.textContent=t>=1000?t.toLocaleString('fr-FR'):String(t);
+  })(t0);
+}
+const cio=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){animC(x.target);cio.unobserve(x.target)}});
+},{threshold:.15,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.counter[data-t]').forEach(el=>{el._c=0;cio.observe(el)});
+/* Fallback: si déjà visible au chargement */
+setTimeout(()=>{
+  document.querySelectorAll('.counter[data-t]').forEach(el=>{
+    if(!el._c){const rect=el.getBoundingClientRect();if(rect.top<window.innerHeight)animC(el);}
+  });
+},600);
 
 /* PROGRESS BARS */
-const pio=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.width=x.target.dataset.w+'%';pio.unobserve(x.target)}})},{threshold:.4});
+const pio=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){
+    setTimeout(()=>{x.target.style.width=x.target.dataset.w+'%'},200);
+    pio.unobserve(x.target);
+  }});
+},{threshold:.1,rootMargin:'0px 0px -10px 0px'});
 document.querySelectorAll('.imp-fill').forEach(el=>pio.observe(el));
+setTimeout(()=>{
+  document.querySelectorAll('.imp-fill').forEach(el=>{
+    const rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight&&!el._done){el._done=1;el.style.width=el.dataset.w+'%';}
+  });
+},700);
 
 /* PARALLAXE HERO */
 const hi=document.getElementById('heroInner');
@@ -1572,6 +1639,48 @@ document.querySelectorAll('.nav-drop').forEach(d=>{
     words[cur].style.opacity = '1';
     words[cur].style.transform = 'translateY(0)';
   }, 2200);
+})();
+
+
+/* ── FORMSPREE AJAX ── */
+(function(){
+  const form = document.getElementById('bb-form');
+  if(!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = document.getElementById('bb-submit');
+    const btnTxt = document.getElementById('bb-btn-txt');
+    const success = document.getElementById('bb-success');
+    const error = document.getElementById('bb-error');
+    success.style.display = 'none';
+    error.style.display = 'none';
+    btn.disabled = true;
+    btn.style.opacity = '.7';
+    btnTxt.textContent = 'Envoi en cours…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        success.style.display = 'block';
+        form.reset();
+        btnTxt.textContent = 'Message envoyé ✓';
+        btn.style.background = 'linear-gradient(135deg,rgba(74,222,128,.8),rgba(26,139,26,.8))';
+      } else {
+        const data = await res.json();
+        error.style.display = 'block';
+        btnTxt.textContent = 'Envoyer le message →';
+        btn.disabled = false; btn.style.opacity = '1';
+        console.error('Formspree error:', data);
+      }
+    } catch(err){
+      error.style.display = 'block';
+      btnTxt.textContent = 'Envoyer le message →';
+      btn.disabled = false; btn.style.opacity = '1';
+    }
+  });
 })();
 
 /* SMOOTH SCROLL */
